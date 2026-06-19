@@ -35,8 +35,8 @@ jobs:
           git merge upstream/main -m "bot: fusionar actualizaciones de upstream" || echo "No hay cambios nuevos en upstream"
           git push origin main
 
-          # 3. Preparar tu rama privada 'mi-red-local' basándose en el main actualizado
-          git checkout mi-red-local || git checkout -b mi-red-local
+          # 3. Preparar tu rama privada 'device-printer' basándose en el main actualizado
+          git checkout device-printer || git checkout -b device-printer 
           git reset --hard main
 
           # 4. Inyectar las etiquetas de AdGuard Home
@@ -48,7 +48,7 @@ jobs:
           # Comprobar si hay diferencias antes de hacer un commit vacío
           if ! git diff-index --quiet HEAD; then
             git commit -m "bot: sync de upstream y aplicación de etiquetas ctag=device_printer"
-            git push origin mi-red-local --force
+            git push origin device-printer --force
             echo "✅ Lista actualizada y etiquetas inyectadas con éxito."
           else
             echo "ℹ️ No se detectaron cambios respecto a la última ejecución."
