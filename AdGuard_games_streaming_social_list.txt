@@ -1,3 +1,4 @@
+[Adblock Plus]
 ! Title: AdGuard GameList Filter (Mafraysse)
 ! Description: Blocklist comunitaria para juegos online, web, streaming y redes sociales.
 ! Version: 2026.06.19
